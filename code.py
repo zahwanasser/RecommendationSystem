@@ -32,9 +32,9 @@ book_description.head()
 # removing the stop words
 books_tfidf = TfidfVectorizer(stop_words='english')
 # filling the missing values with empty string
-book_description['description'] = book_description['description'].fillna('')
+book_description['Description'] = book_description['Description'].fillna('')
 # computing TF-IDF matrix required for calculating cosine similarity
-book_description_matrix = books_tfidf.fit_transform(book_description['description'])
+book_description_matrix = books_tfidf.fit_transform(book_description['Description'])
 
 
 # In[5]:
@@ -76,7 +76,7 @@ print(book_description_matrix)
 
 #seperating the book names column from the dataframe
 df=book_description
-df1=df.loc[:,"name":"name"]
+df1=df.loc[:,"Name":"Name"]
 
 print(df1)
 
@@ -104,7 +104,7 @@ def recommend(index, cosine_sim=cosine_similarity):
 
 
 # getting the input of the book which i want to have similar recommendations to it and matching it to its index in the dataset (the input has to belong to the dataset)
-df2=df1[df1['name' ].str.match(input().title(), na=False)]
+df2=df1[df1['Name' ].str.match(input().title(), na=False)]
 print(df2)
 #getting the index of the book
 df3=df2.index.astype(int)
