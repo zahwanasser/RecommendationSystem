@@ -15,7 +15,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 
 
 # reading file
-book_description = pd.read_csv(r"C:\Users\D\Desktop\math project\Recommendation-systems-using-python-master\Recommendation-systems-using-python-master\description.csv", encoding = 'latin-1')
+book_description = pd.read_csv(rdescription.csv", encoding = 'latin-1')
 
 
 # In[3]:
@@ -102,7 +102,7 @@ def recommend(index, cosine_sim=cosine_similarity):
 # In[12]:
 
 
-# getting the input of the book which i want to have similar recommendations to it and matching it to its index in the dataset
+# getting the input of the book which i want to have similar recommendations to it and matching it to its index in the dataset (the input has to belong to the dataset)
 df2=df1[df1['name' ].str.match(input().title(), na=False)]
 print(df2)
 #getting the index of the book
