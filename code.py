@@ -15,7 +15,8 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 
 
 # reading file
-book_description = pd.read_csv(rdescription.csv", encoding = 'latin-1')
+# in the following line you have to write the file's path on your computer
+book_description = pd.read_csv(r"description.csv", encoding = 'latin-1')
 
 
 # In[3]:
